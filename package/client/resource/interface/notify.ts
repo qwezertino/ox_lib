@@ -18,6 +18,7 @@ interface NotifyProps {
   title?: string;
   description?: string;
   duration?: number;
+  showDuration?: boolean;
   position?: NotificationPosition;
   type?: NotificationType;
   style?: Sx;
@@ -25,6 +26,7 @@ interface NotifyProps {
   iconColor?: string;
   iconAnimation?: IconAnimation;
   alignIcon?: 'top' | 'center';
+  sound?: { bank?: string; set: string; name: string };  
 }
 
 export const notify = (data: NotifyProps): void => exports.ox_lib.notify(data);
